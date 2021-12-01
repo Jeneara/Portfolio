@@ -24,7 +24,7 @@
 <body id="page-top">
     <!-- TODO Create Return to Top Link -->
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Navbar</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -49,25 +49,71 @@
 
 
     <main>
-        <section>
-            <div class="position-relative overflow-hidden text-center" id="about">
-                <div class="mx-auto">
-                    <h1 class="display-1 fw-normal">Stephanie Mason</h1>
-                    <h1 class="display-6 fw-lead">Front End Web Developer</h1>
+        <div class="hero">
+            <div class="container col-xxl-12 px-4 pt-5">
+                <div class="row flex-lg-row-reverse">
+                    <div class="col-10 col-sm-8 col-lg-6">
+                        <img src="assets/headergirl.png" class="img-fluid"
+                            alt="Female Developer working at a desk cartoon" width="700" height="500" loading="lazy">
+                    </div>
+                    <div class="col-lg-6">
+                        <h1 class="display-3 fw-bold">Stephanie Mason</h1>
+                        <p class="display-6 fw-lead">Front End Web Developer</p>
+                    </div>
                 </div>
             </div>
-        </section>
+        </div>
+
+        <!-- Divider -->
+        <svg width="100%" height="100%" id="svg" viewBox="0 0 1440 400" xmlns="http://www.w3.org/2000/svg"
+            class="transition duration-300 ease-in-out delay-150">
+            <style>
+                .path-0 {
+                    animation: pathAnim-0 4s;
+                    animation-timing-function: linear;
+                    animation-iteration-count: infinite;
+                }
+                @keyframes pathAnim-0 {
+                    0% {
+                        d: path("M 0,600 C 0,600 0,300 0,300 C 182.40000000000003,302.5333333333333 364.80000000000007,305.06666666666666 532,305 C 699.1999999999999,304.93333333333334 851.2,302.26666666666665 1000,301 C 1148.8,299.73333333333335 1294.4,299.8666666666667 1440,300 C 1440,300 1440,600 1440,600 Z");
+                    }
+
+                    25% {
+                        d: path("M 0,600 C 0,600 0,300 0,300 C 143.2,327.73333333333335 286.4,355.46666666666664 470,359 C 653.6,362.53333333333336 877.5999999999999,341.8666666666667 1046,328 C 1214.4,314.1333333333333 1327.2,307.06666666666666 1440,300 C 1440,300 1440,600 1440,600 Z");
+                    }
+
+                    50% {
+                        d: path("M 0,600 C 0,600 0,300 0,300 C 173.2,321.4666666666667 346.4,342.93333333333334 495,345 C 643.6,347.06666666666666 767.5999999999999,329.73333333333335 921,319 C 1074.4,308.26666666666665 1257.2,304.1333333333333 1440,300 C 1440,300 1440,600 1440,600 Z");
+                    }
+
+                    75% {
+                        d: path("M 0,600 C 0,600 0,300 0,300 C 125.19999999999999,308.4 250.39999999999998,316.8 434,295 C 617.6,273.2 859.5999999999999,221.20000000000002 1037,217 C 1214.4,212.79999999999998 1327.2,256.4 1440,300 C 1440,300 1440,600 1440,600 Z");
+                    }
+
+                    100% {
+                        d: path("M 0,600 C 0,600 0,300 0,300 C 182.40000000000003,302.5333333333333 364.80000000000007,305.06666666666666 532,305 C 699.1999999999999,304.93333333333334 851.2,302.26666666666665 1000,301 C 1148.8,299.73333333333335 1294.4,299.8666666666667 1440,300 C 1440,300 1440,600 1440,600 Z");
+                    }
+                }
+            </style>
+            <path
+                d="M 0,600 C 0,600 0,300 0,300 C 182.40000000000003,302.5333333333333 364.80000000000007,305.06666666666666 532,305 C 699.1999999999999,304.93333333333334 851.2,302.26666666666665 1000,301 C 1148.8,299.73333333333335 1294.4,299.8666666666667 1440,300 C 1440,300 1440,600 1440,600 Z"
+                stroke="none" stroke-width="0" fill="#f783acff"
+                class="transition-all duration-300 ease-in-out delay-150 path-0" transform="rotate(-180 720 300)">
+            </path>
+        </svg>
+
+
 
         <!-- Portfolio -->
         <section class="portfolio">
-            <div class="position-relative overflow-hidden p-md-3 text-center" id="two">
+            <div class="text-center" id="two">
                 <h1 class="display-2 fw-normal">Portfolio</h1>
                 <p class="display-6 fw-lead">Check out some of my work</p>
                 <!-- First Card -->
-                <div class="card mb-3">
+                <div class="container-fluid mb-3 bg-white">
                     <div class="row g-0">
                         <div class="col-md-4">
-                            <img src="..." class="img-fluid rounded-start float-start p-2" alt="...">
+                            <img src="..." class="img-fluid rounded-start float-start" alt="...">
                         </div>
                         <div class="col-md-8">
                             <div class="card-body">
@@ -96,7 +142,7 @@
                     </div>
                 </div>
                 <!-- Second Card -->
-                <div class="card mb-3">
+                <div class="container-fluid mb-3 bg-white">
                     <div class="row g-0">
                         <div class="col-md-8">
                             <div class="card-body">
@@ -126,16 +172,15 @@
                             </div>
                         </div>
                         <div class="col-md-4">
-                            <img src="..." class="img-fluid rounded-start float-end p-2" alt="...">
+                            <img src="..." class="img-fluid rounded-start float-end" alt="...">
                         </div>
                     </div>
                 </div>
                 <!-- Third Card -->
-                <div class="card mb-3">
+                <div class="container-fluid mb-3 bg-white">
                     <div class="row g-0">
                         <div class="col-md-4">
-                            <img src="assets/landingpage.png" class="img-fluid rounded-start float-start p-2"
-                                alt="...">
+                            <img src="assets/landingpage.png" class="img-fluid rounded-start float-start p-2" alt="...">
                         </div>
                         <div class="col-md-8">
                             <div class="card-body">
@@ -162,7 +207,7 @@
                     </div>
                 </div>
                 <!-- Fourth Card -->
-                <div class="card mb-3">
+                <div class="container-fluid mb-3 bg-white">
                     <div class="row g-0">
                         <div class="col-md-8">
                             <div class="card-body">
@@ -195,7 +240,7 @@
                     </div>
                 </div>
                 <!-- Fifth Card -->
-                <div class="card mb-3">
+                <div class="container-fluid mb-3 bg-white">
                     <div class="row g-0">
                         <div class="col-md-4">
                             <img src="assets/personalblog.png" class="img-fluid rounded-start float-start p-2"
@@ -230,7 +275,7 @@
         </section>
 
         <!-- Side Projects -->
-        <section class="Projects">
+        <section class="projects">
             <div class="position-relative overflow-hidden p-md-3 text-center" id="two">
                 <h1 class="display-2 fw-normal">Extra Projects</h1>
                 <p class="display-6 fw-lead">Check out some of my work</p>
