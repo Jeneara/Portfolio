@@ -29,8 +29,19 @@ section {
     background-color: #7950f2;
 }
 
+.row {
+    align-items: center;
+}
 
+form {
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 20px;
+}
 
+button {
+    background-color: #7950f2;
+}
 
 
 
