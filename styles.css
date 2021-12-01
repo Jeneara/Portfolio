@@ -10,9 +10,6 @@ main {
     background-image: linear-gradient(0deg, #7950f2 5%, #f783ac 95%);
 }
 
-section {
-    /* max-height: auto; */
-}
 
 #about {
     padding-top: 250px;
@@ -42,6 +39,7 @@ form {
 button {
     background-color: #7950f2;
 }
+
 
 
 
