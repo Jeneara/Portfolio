@@ -13,6 +13,7 @@
 .projects {
     background-color: #F783AC;
 }
+
 /* #about {
     padding-top: 250px;
     padding-bottom: 250px;
@@ -29,6 +30,7 @@
 }
 
 .row {
+    justify-content: center;
     align-items: center;
 }
 
@@ -54,24 +56,20 @@ footer {
 /* No media query for `xs` since this is the default in Bootstrap */
 
 /* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) { 
+@media (min-width: 576px) {
+    .col-lg-6 {
+        text-align: center;
 
+    }
 
 }
 
+
 /* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) { 
+@media (min-width: 768px) {}
 
-
- }
-
- /* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) { 
-
- }
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {}
 
 /* Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) { 
-
-
- }
+@media (min-width: 1200px) {}
