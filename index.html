@@ -9,6 +9,10 @@
     <!--CSS Link-->
     <link rel="stylesheet" href="styles.css">
 
+    <!-- AOS Link -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
@@ -56,7 +60,7 @@
                         <img src="assets/headergirl.png" class="img-fluid"
                             alt="Female Developer working at a desk cartoon" width="700" height="500" loading="lazy">
                     </div>
-                    <div class="col-lg-6">
+                    <div class="col-lg-6" data-aos="fade-up" data-aos-duration="1500">
                         <h1 class="display-3 fw-bold">Stephanie Mason</h1>
                         <p class="display-6 fw-lead">Front End Web Developer</p>
                     </div>
@@ -127,9 +131,9 @@
                                 Using user input the app gathers the correct information from GeoNames then runs it
                                 through WeatherBit to get the weather information, finally using GeoNames data it
                                 pulls a photo of the location from Pixabay.
-                                </p> --> 
-                                <!-- GITHUB LINK -->
-                                <!-- <div>
+                                </p> -->
+                <!-- GITHUB LINK -->
+                <!-- <div>
                                     <h5 class="p-2">Skills Used</h5>
                                     <div class="">
                                         <span class="skills rounded-pill fw-normal">Bootstrap</span>
@@ -510,6 +514,14 @@
 
     <!-- Core theme JS-->
     <script src="js/scripts.js"></script>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- INITIALIZE AOS -->
+    <script>
+        AOS.init();
+    </script>
 
 </body>
 
