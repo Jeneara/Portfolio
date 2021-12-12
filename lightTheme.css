@@ -1,0 +1,83 @@
+/* CSS Style Sheet */
+
+
+/* Main CSS */
+
+body {
+    position: relative;
+    overflow-y: scroll;
+}
+
+html {
+    scroll-padding-top: 70px;
+}
+
+.hero {
+    background-color: #F783AC;
+}
+
+.projects {
+    background-color: #F783AC;
+}
+
+/* #about {
+    padding-top: 250px;
+    padding-bottom: 250px;
+} */
+
+.mb-3 {
+    margin: 10px;
+}
+
+.skills {
+    padding: 6px;
+    color: #fff;
+    background-color: #7950f2;
+}
+
+.row {
+    justify-content: center;
+    align-items: center;
+}
+
+#socials {
+    color: #444;
+}
+
+form {
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+
+footer {
+    background-color: #F783AC;
+}
+
+/* Portfolio */
+
+#portOne {
+    background-color: #eee;
+}
+
+
+
+/* Extra small devices (portrait phones, less than 576px) */
+/* No media query for `xs` since this is the default in Bootstrap */
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+}
+
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {}
