@@ -2,7 +2,7 @@
 document.querySelectorAll('.my-slider').forEach(slider => {
     tns({
         container: slider,
-        items: 3,
+        items: 1,
         autoplay: false,
         mouseDrag: true,
         swipeAngle: false,
@@ -11,8 +11,6 @@ document.querySelectorAll('.my-slider').forEach(slider => {
         autoheight: true,
         controlsPosition: "bottom",
         navAsThumbnails: true,
-        // edgePadding: 50,
-        // fixedWidth: 500,
         responsive: {
             340: {
                 edgePadding: 20,

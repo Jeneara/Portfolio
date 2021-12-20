@@ -43,6 +43,16 @@ html {
     align-items: center;
 }
 
+#travApp {
+    max-height: 600px;
+    width: auto;
+    justify-content: center;
+}
+
+#col-lg-6 {
+    justify-content: center;
+}
+
 /* Projects Section */
 .projects {
     background-color: #F783AC;
