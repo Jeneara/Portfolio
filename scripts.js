@@ -8,9 +8,8 @@ document.querySelectorAll('.my-slider').forEach(slider => {
         swipeAngle: false,
         speed: 1000,
         touch: true,
-        autoheight: true,
+        autoHeight: false,
         controlsPosition: "bottom",
-        navAsThumbnails: true,
         responsive: {
             340: {
                 edgePadding: 20,
