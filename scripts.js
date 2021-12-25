@@ -1,32 +1,4 @@
-// Tiny Slider
-document.querySelectorAll('.my-slider').forEach(slider => {
-    tns({
-        container: slider,
-        items: 1,
-        autoplay: false,
-        mouseDrag: true,
-        swipeAngle: false,
-        speed: 1000,
-        touch: true,
-        autoHeight: false,
-        controlsPosition: "bottom",
-        responsive: {
-            340: {
-                edgePadding: 20,
-                gutter: 20,
-                items: 1
-            },
-            700: {
-                edgePadding: 20,
-                gutter: 30,
-                items: 1
-            },
-            900: {
-                items: 1
-            }
-        }
-    });
-});
+
 
 
 // Scrollspy

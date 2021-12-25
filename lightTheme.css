@@ -59,15 +59,13 @@ html {
     justify-content: center;
 }
 
-.my-slider {
-    /* transform: scale(0.50); */
-    /* .thumb-slider {
-        img {
-          width: 60px;
-          height: 60px;
-        }
-      } */
-}
+.carousel img {
+    /* width:600px; */
+    height:500px;
+    object-fit: contain;
+  }
+
+
 
 /* Projects Section */
 .projects {
