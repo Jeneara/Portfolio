@@ -30,13 +30,16 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top" id="navbarMain">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Stephanie Mason</a>
             <div class="collapse navbar-collapse" id="navbarNav">
+                <a class="navbar-brand" href="#">Stephanie Mason</a>
                 <div class="navbar-nav">
-                    <a class="nav-link active" href="#page-top">Home</a>
-                    <a class="nav-link" href="#">About Me</a>
-                    <a class="nav-link" href="#portfolio">Portfolio</a>
-                    <a class="nav-link" href="#projects">Projects</a>
+                    <a class="nav-link active" href="#page-top" data-toggle="collapse"
+                        data-target=".navbar-collapse.show">Home</a>
+                    <a class="nav-link" href="#" data-toggle="collapse" data-target=".navbar-collapse.show">About Me</a>
+                    <a class="nav-link" href="#portfolio" data-toggle="collapse"
+                        data-target=".navbar-collapse.show">Portfolio</a>
+                    <a class="nav-link" href="#contactMe" data-toggle="collapse"
+                        data-target=".navbar-collapse.show">Contact Me</a>
                 </div>
             </div>
 
@@ -158,7 +161,7 @@
             <h1 class="display-2 fw-normal">Portfolio</h1>
             <p class="display-6 fw-lead">Check out some of my work</p>
         </div>
-        
+
         <!-- First Card -->
         <div class="container-fluid mb-3 p-3" data-aos="slide-left" id="portOne" data-aos-duration="1000">
             <div class="row g-0">
@@ -477,61 +480,11 @@
                 </div>
             </div>
         </div>
-
-
-    </section>
-
-
-
-
-
-
-    <!-- Side Projects -->
-    <section class="projects" id="projects">
-        <div class="position-relative overflow-hidden p-md-3 text-center" id="two">
-            <h1 class="display-2 fw-normal">Extra Projects</h1>
-            <p class="display-6 fw-lead">Check out some of my work</p>
-
-            <div class="row row-cols-1 row-cols-md-3 g-4">
-                <div class="col" data-aos="fade-up" data-aos-duration="1000">
-                    <div class="card h-100">
-                        <img src="..." class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a longer card with supporting text below as a natural
-                                lead-in to
-                                additional content. This content is a little bit longer.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col" data-aos="fade-up" data-aos-duration="1500">
-                    <div class="card h-100">
-                        <img src="..." class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a longer card with supporting text below as a natural
-                                lead-in to
-                                additional content.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col" data-aos="fade-up" data-aos-duration="2000">
-                    <div class="card h-100">
-                        <img src="..." class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a longer card with supporting text below as a natural
-                                lead-in to
-                                additional content. This content is a little bit longer.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
     </section>
 
 
     <!-- Contact Me -->
-    <section>
+    <section class="contactMe" id="contactMe">
         <div class="position-relative overflow-hidden p-md-2 text-center">
             <div class="p-lg-2 mx-auto my-5">
                 <h1 class="display-2 fw-normal">Contact Me</h1>

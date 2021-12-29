@@ -17,7 +17,7 @@ html {
 #socials {
     color: #444;
     transform: scale(1);
-    margin: 5px;
+    margin: 2px;
 }
 
 #socials :hover {
@@ -28,7 +28,6 @@ html {
 .hero {
     background-color: #F783AC;
 }
-
 
 
 /* Portfolio */
@@ -80,14 +79,21 @@ html {
     object-fit: contain;
 }
 
-
-
-/* Projects Section */
-.projects {
+/* Contact Me */
+.contactMe {
     background-color: #eee;
     margin-top: 100px;
 }
 
+form {
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+footer {
+    background-color: #F783AC;
+}
 
 
 /* Back to Top Button */
@@ -156,23 +162,6 @@ html {
     font-size: 1em;
     clip: auto !important;
 }
-
-
-
-/* Contact Me */
-form {
-    background-color: #fff;
-    border-radius: 20px;
-    padding: 20px;
-}
-
-
-
-footer {
-    background-color: #F783AC;
-}
-
-
 
 
 /* Extra small devices (portrait phones, less than 576px) */
