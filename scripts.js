@@ -1,5 +1,8 @@
 // Scrollspy
 var scrollSpy = new bootstrap.ScrollSpy(document.body, {
-    target: '#navbarMain',
+    target: '#navbar',
     offset: 100,
-})
+});
+
+//Navbar Close
+

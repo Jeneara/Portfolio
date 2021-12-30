@@ -9,46 +9,43 @@
     <!--CSS Link-->
     <link rel="stylesheet" href="lightTheme.css">
 
-    <!-- AOS Link -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
     <!--Font Awesome (free version)-->
     <script src="https://kit.fontawesome.com/2dd003b306.js" crossorigin="anonymous"></script>
 
+    <!-- AOS Link -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Title -->
     <title>Stephanie Mason</title>
 
 
 
 
-<body id="page-top" data-spy="scroll" data-target=".navbar" data-offset="100">
-    <!-- TODO Create Return to Top Link -->
+<body id="page-top" data-spy="scroll" data-target="#navbar" data-offset="100">
 
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top" id="navbarMain">
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
         <div class="container-fluid">
-            <div class="collapse navbar-collapse navHeaderCollapse" id="navbarNav">
-                <a class="navbar-brand" href="#">Stephanie Mason</a>
-                <div class="nav navbar-nav">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="#">Stephanie Mason</a>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <a class="nav-link active" href="#page-top">Home</a>
 
-                    <a class="nav-link active" href="#page-top" data-toggle="collapse"
-                        data-target=".navbar-collapse.in">Home</a>
+                    <a class="nav-link" href="#">About Me</a>
 
-                    <a class="nav-link" href="#" data-toggle="collapse" data-target=".navbar-collapse.in">About Me</a>
+                    <a class="nav-link" href="#portfolio">Portfolio</a>
 
-                    <a class="nav-link" href="#portfolio" data-toggle="collapse"
-                        data-target=".navbar-collapse.in">Portfolio</a>
-
-                    <a class="nav-link" href="#contactMe" data-toggle="collapse"
-                        data-target=".navbar-collapse.in">Contact Me</a>
-                </div>
+                    <a class="nav-link" href="#contactMe">Contact Me</a>
+                </ul>
             </div>
-
-
-            <!-- Social Links - Font Awesome -->
             <div class="navSoc">
                 <a id="socials" href=""><i class="fas fa-envelope fa-3x"></i></a>
                 <a id="socials" href="https://github.com/Jeneara" target="_blank"> <i
@@ -56,25 +53,25 @@
                 <a id="socials" href="https://www.linkedin.com/in/steph-mason-885666100/" target="_blank"> <i
                         class="fab fa-linkedin fa-3x"></i></a>
             </div>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
         </div>
     </nav>
+    <!-- navbar -->
+
+
+
+
 
     <!-- Return to top button -->
-
     <a class="top-link hide" href="#page-top" id="js-top">
         <i class="fas fa-arrow-circle-up fa-4x"></i>
         <span class="screen-reader-text">Back to top</span>
     </a>
-
+    <!-- Return to top button -->
 
 
     <main>
-        <div class="hero">
+        <!-- Hero -->
+        <div class="hero pt-5">
             <div class="container col-xxl-12 px-4 pt-5">
                 <div class="row flex-lg-row-reverse">
                     <div class="col-10 col-sm-8 col-lg-6">
@@ -93,25 +90,80 @@
                 </div>
             </div>
         </div>
+        <!--  Hero -->
 
-        <!-- Modal -->
+        <!-- Modal for Hero -->
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">Contact Me</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        ...
+                        <!-- Bootstrap 5 starter form -->
+                        <form id="contactForm">
+
+                            <!-- Name input -->
+                            <div class="mb-3">
+                                <label class="form-label" for="name">Name</label>
+                                <input class="form-control" id="name" type="text" placeholder="Name"
+                                    data-sb-validations="required" />
+                                <div class="invalid-feedback" data-sb-feedback="name:required">Name is required.</div>
+                            </div>
+
+                            <!-- Email address input -->
+                            <div class="mb-3">
+                                <label class="form-label" for="emailAddress">Email Address</label>
+                                <input class="form-control" id="emailAddress" type="email" placeholder="Email Address"
+                                    data-sb-validations="required, email" />
+                                <div class="invalid-feedback" data-sb-feedback="emailAddress:required">Email Address is
+                                    required.</div>
+                                <div class="invalid-feedback" data-sb-feedback="emailAddress:email">Email Address Email
+                                    is not valid.</div>
+                            </div>
+
+                            <!-- Subject input -->
+                            <div class="mb-3">
+                                <label class="form-label" for="name">Subject</label>
+                                <input class="form-control" id="subject" type="text" placeholder="Subject"
+                                    data-sb-validations="required" />
+                                <div class="invalid-feedback" data-sb-feedback="subject:required">Subject is required.
+                                </div>
+                            </div>
+
+
+                            <!-- Message input -->
+                            <div class="mb-3">
+                                <label class="form-label" for="message">Message</label>
+                                <textarea class="form-control" id="message" type="text" placeholder="Message"
+                                    style="height: 10rem;" data-sb-validations="required"></textarea>
+                                <div class="invalid-feedback" data-sb-feedback="message:required">Message is required.
+                                </div>
+                            </div>
+
+                            <!-- Form submissions success message -->
+                            <div class="d-none" id="submitSuccessMessage">
+                                <div class="text-center mb-3">Form submission successful!</div>
+                            </div>
+
+                            <!-- Form submissions error message -->
+                            <div class="d-none" id="submitErrorMessage">
+                                <div class="text-center text-danger mb-3">Error sending message!</div>
+                            </div>
+
+                            <!-- Form submit button -->
+                            <div class="d-grid">
+                                <button class="btn btn-lg" type="submit">Submit</button>
+                            </div>
+
+                        </form>
                     </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-dark">Save changes</button>
-                    </div>
+
                 </div>
             </div>
         </div>
+        <!-- Modal for Hero -->
 
 
 
@@ -168,7 +220,7 @@
         </div>
 
         <!-- First Card -->
-        <div class="container-fluid mb-3 p-3" data-aos="slide-left" id="portOne" data-aos-duration="1000">
+        <div class="container-fluid mb-3 p-3" data-aos="fade-left" id="portOne" data-aos-duration="1000">
             <div class="row g-0">
                 <div class="col-lg-4">
                     <div class="card-body">
@@ -252,7 +304,7 @@
         </div>
 
         <!-- Second Card -->
-        <div class="container-fluid mb-3 bg-white p-3" data-aos="slide-right" data-aos-duration="1000">
+        <div class="container-fluid mb-3 bg-white p-3" data-aos="fade-right" data-aos-duration="1000">
             <div class="row g-0">
                 <div class="col-lg-8 order-lg-1 order-md-last order-last">
                     <div id="carouselTwo" class="carousel carousel-dark slide" data-bs-ride="carousel">
@@ -333,7 +385,7 @@
 
 
         <!-- Third Card -->
-        <div class="container-fluid mb-3 p-3" data-aos="slide-left" id="portOne" data-aos-duration="1000">
+        <div class="container-fluid mb-3 p-3" data-aos="fade-left" id="portOne" data-aos-duration="1000">
             <div class="row g-0">
                 <div class="col-lg-4">
                     <div class="card-body">
@@ -413,7 +465,7 @@
         </div>
 
         <!-- Forth Card -->
-        <div class="container-fluid mb-3 bg-white p-3" data-aos="slide-right" data-aos-duration="1000">
+        <div class="container-fluid mb-3 bg-white p-3" data-aos="fade-right" data-aos-duration="1000">
             <div class="row g-0">
                 <div class="col-lg-8 order-lg-1 order-md-last order-last">
                     <div id="carouselFour" class="carousel carousel-dark slide" data-bs-ride="carousel">
@@ -486,69 +538,84 @@
             </div>
         </div>
     </section>
+    <!-- Portfolio -->
 
 
     <!-- Contact Me -->
     <section class="contactMe" id="contactMe">
         <div class="position-relative overflow-hidden p-md-2 text-center">
             <div class="p-lg-2 mx-auto my-5">
-                <h1 class="display-2 fw-normal">Contact Me</h1>
                 <!-- Wrapper container -->
                 <div class="container py-4">
+                    
 
-                    <!-- Bootstrap 5 starter form -->
-                    <form id="contactForm">
+                    <!-- create form -->
+                    <form id="contact-form" method="post" action="contact.php" role="form">
+                        <h1 class="display-2 fw-normal">Contact Me</h1>
 
-                        <!-- Name input -->
-                        <div class="mb-3">
-                            <label class="form-label" for="name">Name</label>
-                            <input class="form-control" id="name" type="text" placeholder="Name"
-                                data-sb-validations="required" />
-                            <div class="invalid-feedback" data-sb-feedback="name:required">Name is required.</div>
+                        <div class="messages"></div>
+
+                        <div class="controls">
+
+                            <div class="mb-3">
+                                <div class="form-group">
+                                    <label for="form_name">Name *</label>
+                                    <input id="form_name" type="text" name="name" class="form-control"
+                                        placeholder="Please enter your Name *" required="required"
+                                        data-error="Name is required.">
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                            <div class="form-group">
+                                <label for="form_subject">Subject *</label>
+                                <input id="form_subject" type="text" name="subject" class="form-control"
+                                    placeholder="Please enter the subject for your message *" required="required"
+                                    data-error="subject is required.">
+                                <div class="help-block with-errors"></div>
+                            </div>
                         </div>
-
-                        <!-- Email address input -->
                         <div class="mb-3">
-                            <label class="form-label" for="emailAddress">Email Address</label>
-                            <input class="form-control" id="emailAddress" type="email" placeholder="Email Address"
-                                data-sb-validations="required, email" />
-                            <div class="invalid-feedback" data-sb-feedback="emailAddress:required">Email Address is
-                                required.</div>
-                            <div class="invalid-feedback" data-sb-feedback="emailAddress:email">Email Address Email
-                                is not valid.</div>
-                        </div>
-
-                        <!-- Message input -->
-                        <div class="mb-3">
-                            <label class="form-label" for="message">Message</label>
-                            <textarea class="form-control" id="message" type="text" placeholder="Message"
-                                style="height: 10rem;" data-sb-validations="required"></textarea>
-                            <div class="invalid-feedback" data-sb-feedback="message:required">Message is required.
+                            <div class="form-group">
+                                <label for="form_email">Email *</label>
+                                <input id="form_email" type="email" name="email" class="form-control"
+                                    placeholder="Please enter your email *" required="required"
+                                    data-error="Valid email is required.">
+                                <div class="help-block with-errors"></div>
                             </div>
                         </div>
 
-                        <!-- Form submissions success message -->
-                        <div class="d-none" id="submitSuccessMessage">
-                            <div class="text-center mb-3">Form submission successful!</div>
+                        <div class="mb-3">
+                            <div class="form-group">
+                                <label for="form_message">Message *</label>
+                                <textarea id="form_message" name="message" class="form-control"
+                                    placeholder="Message for me *" rows="4" required="required"
+                                    data-error="Please, leave us a message."></textarea>
+                                <div class="help-block with-errors"></div>
+                            </div>
                         </div>
-
-                        <!-- Form submissions error message -->
-                        <div class="d-none" id="submitErrorMessage">
-                            <div class="text-center text-danger mb-3">Error sending message!</div>
-                        </div>
-
-                        <!-- Form submit button -->
                         <div class="d-grid">
-                            <button class="btn btn-lg" type="submit">Submit</button>
+                            <input type="submit" class="btn btn-lg bg-secondary text-light" value="Send message">
                         </div>
-
-                    </form>
-
+                        <div class="row">
+                            <div class="col-md-12">
+                                <p class="text-muted">
+                                    <strong>*</strong> These fields are required.
+                                </p>
+                            </div>
+                        </div>
                 </div>
-                <!-- create form -->
+
+                </form>
+
+
             </div>
         </div>
+        </div>
     </section>
+    <!-- Contact Me -->
+
     </main>
 
 
@@ -594,13 +661,17 @@
         <p class="h6 fw-lead 3text-white text-center">Copyright 2021 Stephanie Mason</p>
     </footer>
 
+    <!-- Core theme JS-->
+    <script src="scripts.js"></script>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <!-- Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
-
 
     <!-- AOS JS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -609,9 +680,6 @@
     <script>
         AOS.init({ disable: 'mobile' });
     </script>
-
-    <!-- Core theme JS-->
-    <script src="scripts.js"></script>
 
 </body>
 

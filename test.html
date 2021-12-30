@@ -39,3 +39,106 @@
             </div>
         </div>
 </section>
+
+
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top" id="navbarMain">
+    <div class="container-fluid">
+        <div class="collapse navbar-collapse navHeaderCollapse" id="navbarNav">
+            <a class="navbar-brand" href="#">Stephanie Mason</a>
+            <div class="nav navbar-nav">
+
+                <a class="nav-link active" href="#page-top" data-toggle="collapse"
+                    data-target=".navbar-collapse.in">Home</a>
+
+                <a class="nav-link" href="#" data-toggle="collapse" data-target=".navbar-collapse.in">About Me</a>
+
+                <a class="nav-link" href="#portfolio" data-toggle="collapse"
+                    data-target=".navbar-collapse.in">Portfolio</a>
+
+                <a class="nav-link" href="#contactMe" data-toggle="collapse"
+                    data-target=".navbar-collapse.in">Contact Me</a>
+            </div>
+        </div>
+
+
+        <!-- Social Links - Font Awesome -->
+        <div class="navSoc">
+            <a id="socials" href=""><i class="fas fa-envelope fa-3x"></i></a>
+            <a id="socials" href="https://github.com/Jeneara" target="_blank"> <i
+                    class="fab fa-github fa-3x"></i></a>
+            <a id="socials" href="https://www.linkedin.com/in/steph-mason-885666100/" target="_blank"> <i
+                    class="fab fa-linkedin fa-3x"></i></a>
+        </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+    </div>
+</nav>
+
+
+    <!-- Contact Me -->
+    <section class="contactMe" id="contactMe">
+        <div class="position-relative overflow-hidden p-md-2 text-center">
+            <div class="p-lg-2 mx-auto my-5">
+                <h1 class="display-2 fw-normal">Contact Me</h1>
+                <!-- Wrapper container -->
+                <div class="container py-4">
+
+                    <!-- Bootstrap 5 starter form -->
+                    <form id="contactForm">
+
+                        <!-- Name input -->
+                        <div class="mb-3">
+                            <label class="form-label" for="name">Name</label>
+                            <input class="form-control" id="name" type="text" placeholder="Name"
+                                data-sb-validations="required" />
+                            <div class="invalid-feedback" data-sb-feedback="name:required">Name is required.</div>
+                        </div>
+
+                        <!-- Email address input -->
+                        <div class="mb-3">
+                            <label class="form-label" for="emailAddress">Email Address</label>
+                            <input class="form-control" id="emailAddress" type="email" placeholder="Email Address"
+                                data-sb-validations="required, email" />
+                            <div class="invalid-feedback" data-sb-feedback="emailAddress:required">Email Address is
+                                required.</div>
+                            <div class="invalid-feedback" data-sb-feedback="emailAddress:email">Email Address Email
+                                is not valid.</div>
+                        </div>
+
+                        <!-- Message input -->
+                        <div class="mb-3">
+                            <label class="form-label" for="message">Message</label>
+                            <textarea class="form-control" id="message" type="text" placeholder="Message"
+                                style="height: 10rem;" data-sb-validations="required"></textarea>
+                            <div class="invalid-feedback" data-sb-feedback="message:required">Message is required.
+                            </div>
+                        </div>
+
+                        <!-- Form submissions success message -->
+                        <div class="d-none" id="submitSuccessMessage">
+                            <div class="text-center mb-3">Form submission successful!</div>
+                        </div>
+
+                        <!-- Form submissions error message -->
+                        <div class="d-none" id="submitErrorMessage">
+                            <div class="text-center text-danger mb-3">Error sending message!</div>
+                        </div>
+
+                        <!-- Form submit button -->
+                        <div class="d-grid">
+                            <button class="btn btn-lg" type="submit">Submit</button>
+                        </div>
+
+                    </form>
+
+                </div>
+                <!-- create form -->
+            </div>
+        </div>
+    </section>
+    <!-- Contact Me -->
