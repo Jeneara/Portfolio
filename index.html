@@ -25,35 +25,36 @@
 
 
 
-<body id="page-top" data-spy="scroll" data-target="#navbar" data-offset="100">
+<body data-spy="scroll" data-target="#navbar" data-offset="100">
 
     <!-- navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark text-white fixed-top">
         <div class="container-fluid">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
-                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <a class="navbar-brand text-white" href="#">STEPHANIE MASON</a>
+            <a class="navbar-brand text-white order-1 fw-bold" href="#">STEPHANIE MASON</a>
 
             <!-- Social links -->
-            <div class="navSoc order-last order-sm-1">
+            <div class="navSoc order-2 order-lg-last">
                 <a id="socials" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fas fa-envelope fa-2x"
                         href=""></i></a>
                 <a id="socials" href="https://github.com/Jeneara" target="_blank"> <i
                         class="fab fa-github fa-2x"></i></a>
                 <a id="socials" href="https://www.linkedin.com/in/steph-mason-885666100/" target="_blank"> <i
                         class="fab fa-linkedin fa-2x"></i></a>
+
             </div>
 
+            <button class="navbar-toggler order-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="true" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
             <!-- Page links -->
-            <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="collapse navbar-collapse order-3" id="navbarCollapse">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#page-top">Home</a>
+                    <li class="nav-item ">
+                        <a class="nav-link active" href="#">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">About Me</a>
+                        <a class="nav-link" href="#aboutMe">About Me</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#portfolio">Portfolio</a>
@@ -76,7 +77,7 @@
 
 
     <!-- Return to top button -->
-    <a class="top-link hide" href="#page-top" id="js-top">
+    <a class="top-link hide" href="#" id="js-top">
         <i class="fas fa-arrow-circle-up fa-4x"></i>
         <span class="screen-reader-text">Back to top</span>
     </a>

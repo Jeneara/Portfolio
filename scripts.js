@@ -45,13 +45,8 @@ $(function () {
 });
 
 //Navbar hamburger Close on click
-if (window.innerWidth < 960) {
-  const navLinks = document.querySelectorAll('.nav-item')
-  const menuToggle = document.getElementById('navbarCollapse')
-  const bsCollapse = new bootstrap.Collapse(menuToggle)
-  navLinks.forEach((l) => {
-    l.addEventListener('click', () => {
-      bsCollapse.toggle()
-    })
-  })
-}
+if (window.innerWidth < 992) {
+  $('.navbar-nav>li>a').on('click', function() {
+    $('.navbar-collapse').collapse('hide');
+ });
+};

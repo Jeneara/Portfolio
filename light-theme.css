@@ -10,13 +10,14 @@ body {
 }
 
 html {
-    scroll-padding-top: 100px;
+    scroll-padding-top: 70px;
 }
 
 
 /* NavBar */
 .navbar {
     background-color: #e5608f !important;
+    padding: 0 0 0 0 !important;
 }
 
 .nav-item {
@@ -44,7 +45,7 @@ html {
 }
 
 .navbar-brand {
-    font-size: 16px !important;
+    font-size: 15px !important;
 }
 
 
@@ -271,11 +272,7 @@ footer {
 /* No media query for `xs` since this is the default in Bootstrap */
 
 /* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) {}
-
-
-/* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) {
+@media (min-width: 576px) {
     #socials {
         padding: 10px;
         margin: 0 5px;
@@ -283,8 +280,14 @@ footer {
 
     .navbar-brand {
         font-size: 20px !important;
+        padding: 0 30px 0 10px;
     }
 }
+
+
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {}
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {}
