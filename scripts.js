@@ -1,26 +1,3 @@
-// Theme Switch
-
-// Select the button
-const btn = document.querySelector(".btn-toggle");
-// Select the stylesheet <link>
-const theme = document.querySelector("#theme-link");
-
-// Listen for a click on the button
-btn.addEventListener("click", function () {
-  // If the current URL contains "ligh-theme.css"
-  if (theme.getAttribute("href") == "light-theme.css") {
-    // ... then switch it to "dark-theme.css"
-    theme.href = "dark-theme.css";
-    // Otherwise...
-  } else {
-    // ... switch it to "light-theme.css"
-    theme.href = "light-theme.css";
-  }
-});
-
-
-
-
 //Contact Form
 $(function () {
 
@@ -68,8 +45,13 @@ $(function () {
 });
 
 //Navbar hamburger Close on click
-$(window).resize(function () {
-  if ($(window).width() < 960) {
-    alert('Less than 960');
-  }
-});
+if (window.innerWidth < 960) {
+  const navLinks = document.querySelectorAll('.nav-item')
+  const menuToggle = document.getElementById('navbarCollapse')
+  const bsCollapse = new bootstrap.Collapse(menuToggle)
+  navLinks.forEach((l) => {
+    l.addEventListener('click', () => {
+      bsCollapse.toggle()
+    })
+  })
+}
