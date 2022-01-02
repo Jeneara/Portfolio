@@ -1,0 +1,293 @@
+/* CSS Style Sheet */
+
+
+/* Main CSS */
+
+body {
+    position: relative;
+    overflow-y: scroll;
+    overflow-x: hidden !important;
+}
+
+html {
+    scroll-padding-top: 100px;
+}
+
+
+/* NavBar */
+.navbar {
+    background-color: #200e14 !important;
+}
+
+.nav-item {
+    padding: 0em 1em 0em 1em;
+}
+
+.nav-link {
+    color: #fff !important;
+}
+
+.navbar-expand-lg .navbar-nav {
+    border-right: 1px solid rgba(255, 255, 255, .4);
+}
+
+.navbar .navbar-nav .nav-item {
+    border-left: 1px solid rgba(255, 255, 255, .4);
+    display: block;
+    height: 100%;
+    color: #ffd5e4;
+}
+
+.navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .show>.nav-link {
+    color: rgb(255 255 255);
+    background-color: #ff6b9f;
+}
+
+.navbar-brand {
+    font-size: 16px !important;
+}
+
+
+#socials {
+    display: flex;
+    float: left;
+    margin: 0 3px;
+    height: 55px;
+    align-items: center;
+    color: #fff0f5;
+    text-decoration: none;
+}
+
+#socials :hover {
+    color: #fff;
+}
+
+.hero {
+    background-color: #F783AC;
+}
+
+
+/* Theme switcher button */
+
+.btn-toggle {
+    transition: all .25s ease-in-out;
+    color: #444;
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: inline-flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    margin: 3em 3em 0 0;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    background-color: #F8F8F8;
+    z-index: 9999;
+    text-decoration: none;
+
+}
+
+
+/* Portfolio */
+#portOne {
+    background-color: #eee;
+}
+
+#linksPort {
+    color: #ffa0c2 !important;
+    transition: all ease .3s;
+
+}
+
+#linksPort:hover {
+    Cursor: pointer;
+    color: #ffb4cf !important;
+    transform: scale(1.05);
+    transition: all ease .7s;
+}
+
+.skills {
+    margin: 2px;
+    border-width: 5px;
+    border-color: black;
+    border-radius: 10px;
+    padding: 0.4em 1.3em 0.45em 1.3em;
+    text-transform: uppercase;
+    font-size: 14px;
+    background: #ffa0c2 !important;
+    color: #48001a !important;
+    font-weight: 500 !important;
+    transition: all ease .3s;
+
+}
+
+.skills:hover {
+    Cursor: pointer;
+    background: #ffb4cf !important;
+    transform: scale(1.05);
+    transition: all ease .7s;
+}
+
+.butSkill {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.mb-3 {
+    margin: 10px;
+}
+
+.row {
+    justify-content: center;
+    align-items: center;
+}
+
+#travApp {
+    width: auto;
+    justify-content: center;
+}
+
+#col-lg-6 {
+    justify-content: center;
+}
+
+.carousel img {
+    /* width:600px; */
+    height: 500px;
+    object-fit: contain;
+}
+
+
+/* Contact Me */
+#contactMe {
+    background-color: #eee;
+    margin-top: 100px;
+}
+
+#contact-form {
+    max-width: 900px;
+    margin: auto;
+}
+
+.btn-send {
+    margin: 0px 10px 0px 10px;
+    background-color: #F783AC !important;
+}
+
+@media screen {
+    .form-group label {
+        display: none;
+    }
+}
+
+form {
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+
+/* Footer */
+footer {
+    background-color: #F783AC;
+}
+
+
+
+/* Back to Top Button */
+.top-link {
+    transition: all .25s ease-in-out;
+    color: #444;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    display: inline-flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    margin: 0 3em 3em 0;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    background-color: #F8F8F8;
+    z-index: 9999;
+    text-decoration: none;
+}
+
+.top-link .show {
+    visibility: visible;
+    opacity: 1;
+    z-index: 9999;
+}
+
+.top-link .hide {
+    visibility: hidden;
+    opacity: 0;
+    z-index: 9999;
+}
+
+.top-link:hover {
+    color: #F783AC;
+}
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+    position: absolute;
+    clip-path: inset(50%);
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    word-wrap: normal !important;
+    clip: rect(1px, 1px, 1px, 1px);
+}
+
+.screen-reader-text:focus {
+    display: block;
+    top: 5px;
+    left: 5px;
+    z-index: 100000;
+    clip-path: none;
+    background-color: #eee;
+    padding: 15px 23px 14px;
+    width: auto;
+    height: auto;
+    text-decoration: none;
+    line-height: normal;
+    color: #444;
+    font-size: 1em;
+    clip: auto !important;
+}
+
+
+
+
+
+/* Extra small devices (portrait phones, less than 576px) */
+/* No media query for `xs` since this is the default in Bootstrap */
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {}
+
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    #socials {
+        padding: 10px;
+        margin: 0 5px;
+    }
+
+    .navbar-brand {
+        font-size: 20px !important;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {}

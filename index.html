@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!--CSS Link-->
-    <link rel="stylesheet" href="lightTheme.css">
+    <link rel="stylesheet" href="light-theme.css" id="theme-link">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
@@ -28,34 +28,48 @@
 <body id="page-top" data-spy="scroll" data-target="#navbar" data-offset="100">
 
     <!-- navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark text-white fixed-top">
         <div class="container-fluid">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
                 aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <a class="navbar-brand" href="#">Stephanie Mason</a>
+            <a class="navbar-brand text-white" href="#">STEPHANIE MASON</a>
+
+            <!-- Social links -->
+            <div class="navSoc order-last order-sm-1">
+                <a id="socials" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fas fa-envelope fa-2x"
+                        href=""></i></a>
+                <a id="socials" href="https://github.com/Jeneara" target="_blank"> <i
+                        class="fab fa-github fa-2x"></i></a>
+                <a id="socials" href="https://www.linkedin.com/in/steph-mason-885666100/" target="_blank"> <i
+                        class="fab fa-linkedin fa-2x"></i></a>
+            </div>
+
+            <!-- Page links -->
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <a class="nav-link active" href="#page-top">Home</a>
-
-                    <a class="nav-link" href="#">About Me</a>
-
-                    <a class="nav-link" href="#portfolio">Portfolio</a>
-
-                    <a class="nav-link" href="#contactMe">Contact Me</a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#page-top">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About Me</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#portfolio">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contactMe">Contact Me</a>
+                    </li>
                 </ul>
-            </div>
-            <div class="navSoc">
-                <a id="socials" href=""><i class="fas fa-envelope fa-3x"></i></a>
-                <a id="socials" href="https://github.com/Jeneara" target="_blank"> <i
-                        class="fab fa-github fa-3x"></i></a>
-                <a id="socials" href="https://www.linkedin.com/in/steph-mason-885666100/" target="_blank"> <i
-                        class="fab fa-linkedin fa-3x"></i></a>
             </div>
         </div>
     </nav>
     <!-- navbar -->
+
+    <!-- Theme switch button -->
+    <!-- <button class="btn-toggle bg-primary">Toggle Dark-Mode</button> -->
+    <!-- Theme switch button -->
 
 
 
@@ -94,80 +108,79 @@
 
         <!-- Modal for Hero -->
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
+            <div class="modal-dialog modal-lg">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Contact Me</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">Contact Steph</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
                         <!-- Bootstrap 5 starter form -->
-                        <form id="contactForm">
+                        <form id="contact-form" method="post" action="contact.php" role="form">
 
-                            <!-- Name input -->
-                            <div class="mb-3">
-                                <label class="form-label" for="name">Name</label>
-                                <input class="form-control" id="name" type="text" placeholder="Name"
-                                    data-sb-validations="required" />
-                                <div class="invalid-feedback" data-sb-feedback="name:required">Name is required.</div>
-                            </div>
 
-                            <!-- Email address input -->
-                            <div class="mb-3">
-                                <label class="form-label" for="emailAddress">Email Address</label>
-                                <input class="form-control" id="emailAddress" type="email" placeholder="Email Address"
-                                    data-sb-validations="required, email" />
-                                <div class="invalid-feedback" data-sb-feedback="emailAddress:required">Email Address is
-                                    required.</div>
-                                <div class="invalid-feedback" data-sb-feedback="emailAddress:email">Email Address Email
-                                    is not valid.</div>
-                            </div>
-
-                            <!-- Subject input -->
-                            <div class="mb-3">
-                                <label class="form-label" for="name">Subject</label>
-                                <input class="form-control" id="subject" type="text" placeholder="Subject"
-                                    data-sb-validations="required" />
-                                <div class="invalid-feedback" data-sb-feedback="subject:required">Subject is required.
+                            <!-- Required Fields -->
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <p class="text-muted text-center">
+                                        <strong>*</strong> These fields are required.
+                                    </p>
                                 </div>
                             </div>
 
+                            <div class="messages">
 
-                            <!-- Message input -->
-                            <div class="mb-3">
-                                <label class="form-label" for="message">Message</label>
-                                <textarea class="form-control" id="message" type="text" placeholder="Message"
-                                    style="height: 10rem;" data-sb-validations="required"></textarea>
-                                <div class="invalid-feedback" data-sb-feedback="message:required">Message is required.
+                                <div class="controls">
+                                    <!-- Name Input -->
+                                    <div class="mb-3">
+                                        <div class="form-group">
+                                            <label for="form_name">Name *</label>
+                                            <input id="form_name" type="text" name="name" class="form-control"
+                                                placeholder="Please enter your Name *" required="required"
+                                                data-error="Name is required.">
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                    </div>
+                                    <!-- Email Input -->
+                                    <div class="mb-3">
+                                        <div class="form-group">
+                                            <label for="form_email">Email *</label>
+                                            <input id="form_email" type="email" name="email" class="form-control"
+                                                placeholder="Please enter your email *" required="required"
+                                                data-error="Valid email is required.">
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                    </div>
+                                    <!-- Subject Input -->
+                                    <div class="mb-3">
+                                        <div class="form-group">
+                                            <label for="form_subject">Subject</label>
+                                            <input id="form_subject" type="text" name="subject" class="form-control"
+                                                placeholder="Please enter the subject for your message">
+                                        </div>
+                                    </div>
+                                    <!-- Message Input -->
+                                    <div class="mb-3">
+                                        <div class="form-group">
+                                            <label for="form_message">Message *</label>
+                                            <textarea id="form_message" name="message" class="form-control"
+                                                placeholder="Message for me *" rows="4" required="required"
+                                                data-error="Please, leave us a message."></textarea>
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                    </div>
+                                    <!-- Submit Button -->
+                                    <div class="d-grid">
+                                        <input type="submit" class="btn btn-lg btn-send" value="Send message">
+                                    </div>
                                 </div>
                             </div>
-
-                            <!-- Form submissions success message -->
-                            <div class="d-none" id="submitSuccessMessage">
-                                <div class="text-center mb-3">Form submission successful!</div>
-                            </div>
-
-                            <!-- Form submissions error message -->
-                            <div class="d-none" id="submitErrorMessage">
-                                <div class="text-center text-danger mb-3">Error sending message!</div>
-                            </div>
-
-                            <!-- Form submit button -->
-                            <div class="d-grid">
-                                <button class="btn btn-lg" type="submit">Submit</button>
-                            </div>
-
                         </form>
                     </div>
-
                 </div>
             </div>
         </div>
         <!-- Modal for Hero -->
-
-
-
-
 
 
         <!-- Divider Bottom-->
@@ -210,7 +223,27 @@
         </svg>
     </main>
 
+    <!-- About Me -->
+    <section class="aboutMe" id="aboutMe">
+        <div class="position-relative overflow-hidden p-md-3 text-center">
+            <h1 class="display-2 fw-normal">About Me</h1>
+        </div>
 
+        <div class="container-fluid bg-light">
+            <div class="card-body">
+                <h3 class="card-title">about me</h3>
+                <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque alias maiores
+                    molestiae ex iusto laborum odit! Itaque suscipit qui possimus tempore deleniti illo minima magni
+                    laborum? Eligendi omnis nobis modi!
+                </p>
+            </div>
+
+
+        </div>
+
+
+    </section>
+    <!-- About Me -->
 
     <!-- Portfolio -->
     <section class="portfolio" id="portfolio">
@@ -239,23 +272,23 @@
                         <div>
                             <h5 class="p-2">Features</h5>
                             <div class="butSkill">
-                                <span class="skills rounded-pill bg-secondary fw-normal">Responsive Design</span>
+                                <span class="skills rounded-pill">Responsive Design</span>
                             </div>
                             <h5 class="p-2">Skills</h5>
                             <div class="butSkill">
-                                <span class="skills rounded-pill bg-secondary fw-normal">HTML</span>
-                                <span class="skills rounded-pill bg-secondary fw-normal">CSS</span>
-                                <span class="skills rounded-pill bg-secondary fw-normal">Wordpress</span>
-                                <span class="skills rounded-pill bg-secondary fw-normal">PHP</span>
-                                <span class="skills rounded-pill bg-secondary fw-normal">Vue.js</span>
+                                <span class="skills rounded-pill">HTML</span>
+                                <span class="skills rounded-pill">CSS</span>
+                                <span class="skills rounded-pill">Wordpress</span>
+                                <span class="skills rounded-pill">PHP</span>
+                                <span class="skills rounded-pill">Vue.js</span>
                             </div>
                             <h5 class="p-2">Plugins Used</h5>
                             <div class="butSkill">
-                                <span class="skills rounded-pill bg-secondary fw-normal">ACF</span>
-                                <span class="skills rounded-pill bg-secondary fw-normal">Font Awesome</span>
-                                <span class="skills rounded-pill bg-secondary fw-normal">Imagify</span>
-                                <span class="skills rounded-pill bg-secondary fw-normal">ProfileGrid</span>
-                                <span class="skills rounded-pill bg-secondary fw-normal">RegistrationMagic</span>
+                                <span class="skills rounded-pill">ACF</span>
+                                <span class="skills rounded-pill">Font Awesome</span>
+                                <span class="skills rounded-pill">Imagify</span>
+                                <span class="skills rounded-pill">ProfileGrid</span>
+                                <span class="skills rounded-pill">RegistrationMagic</span>
 
                             </div>
                         </div>
@@ -354,28 +387,28 @@
                             href="https://pixabay.com/api/docs/">Pixabay</a>.
                         </p>
                         <!-- GITHUB LINK -->
-                        <a id="socials" href=""><i class="fab fa-github fa-3x"></i></a>
+                        <a id="linksPort" href=""><i class="fab fa-github fa-3x"></i></a>
 
                         <div>
                             <h5 class="p-2">Skills</h5>
                             <div class="butSkill">
-                                <span class="skills rounded-pill bg-secondary fw-normal">Responsive Design</span>
-                                <span class="skills rounded-pill bg-secondary fw-normal">API</span>
-                                <span class="skills rounded-pill bg-secondary fw-normal">GITHUB</span>
+                                <span class="skills rounded-pill ">Responsive Design</span>
+                                <span class="skills rounded-pill">API</span>
+                                <span class="skills rounded-pill">GITHUB</span>
                             </div>
                             <h5 class="p-2">Languages</h5>
                             <div class="butSkill">
-                                <span class="skills rounded-pill bg-secondary fw-normal">HTML</span>
-                                <span class="skills rounded-pill bg-secondary fw-normal">SASS</span>
-                                <span class="skills rounded-pill bg-secondary fw-normal">Javascript</span>
+                                <span class="skills rounded-pill">HTML</span>
+                                <span class="skills rounded-pill">SASS</span>
+                                <span class="skills rounded-pill">Javascript</span>
                             </div>
                             <h5 class="p-2">Back-end</h5>
                             <div class="butSkill">
-                                <span class="skills rounded-pill bg-secondary fw-normal">Node.js</span>
-                                <span class="skills rounded-pill bg-secondary fw-normal">BABEL</span>
-                                <span class="skills rounded-pill bg-secondary fw-normal">Webpack</span>
-                                <span class="skills rounded-pill bg-secondary fw-normal">Express</span>
-                                <span class="skills rounded-pill bg-secondary fw-normal">Jest</span>
+                                <span class="skills rounded-pill">Node.js</span>
+                                <span class="skills rounded-pill">BABEL</span>
+                                <span class="skills rounded-pill">Webpack</span>
+                                <span class="skills rounded-pill">Express</span>
+                                <span class="skills rounded-pill">Jest</span>
                             </div>
                         </div>
                     </div>
@@ -402,28 +435,28 @@
                         <div>
                             <h5 class="p-2">Skills</h5>
                             <div class="butSkill">
-                                <span class="skills rounded-pill bg-secondary fw-normal">HTML</span>
-                                <span class="skills rounded-pill bg-secondary fw-normal">SASS</span>
-                                <span class="skills rounded-pill bg-secondary fw-normal">JavaScript</span>
-                                <span class="skills rounded-pill bg-secondary fw-normal">Node.js</span>
-                                <span class="skills rounded-pill bg-secondary fw-normal">Webpack</span>
-                                <span class="skills rounded-pill bg-secondary fw-normal">Jest</span>
+                                <span class="skills rounded-pill">HTML</span>
+                                <span class="skills rounded-pill">SASS</span>
+                                <span class="skills rounded-pill">JavaScript</span>
+                                <span class="skills rounded-pill">Node.js</span>
+                                <span class="skills rounded-pill">Webpack</span>
+                                <span class="skills rounded-pill">Jest</span>
                             </div>
                             <h5 class="p-2">Skills</h5>
                             <div class="butSkill">
-                                <span class="skills rounded-pill bg-secondary fw-normal">GITHUB</span>
+                                <span class="skills rounded-pill">GITHUB</span>
                             </div>
                             <h5 class="p-2">Languages</h5>
                             <div class="butSkill">
-                                <span class="skills rounded-pill bg-secondary fw-normal">HTML</span>
-                                <span class="skills rounded-pill bg-secondary fw-normal">Javascript</span>
+                                <span class="skills rounded-pill">HTML</span>
+                                <span class="skills rounded-pill">Javascript</span>
                             </div>
                             <h5 class="p-2">Back-end</h5>
                             <div class="butSkill">
-                                <span class="skills rounded-pill bg-secondary fw-normal">Node.js</span>
-                                <span class="skills rounded-pill bg-secondary fw-normal">Twit</span>
-                                <span class="skills rounded-pill bg-secondary fw-normal">Express</span>
-                                <span class="skills rounded-pill bg-secondary fw-normal">Dotenv</span>
+                                <span class="skills rounded-pill">Node.js</span>
+                                <span class="skills rounded-pill">Twit</span>
+                                <span class="skills rounded-pill">Express</span>
+                                <span class="skills rounded-pill">Dotenv</span>
                             </div>
                         </div>
                     </div>
@@ -512,25 +545,26 @@
                         </ul>
                         </p>
                         <!-- Twitter Link-->
-                        <a id="socials" href="https://twitter.com/AmareParTea"><i class="fab fa-twitter fa-3x"></i></a>
+                        <a id="linksPort" href="https://twitter.com/AmareParTea"><i
+                                class="fab fa-twitter fa-3x"></i></a>
 
                         <div>
                             <h5 class="p-2">Skills</h5>
                             <div class="butSkill">
-                                <span class="skills rounded-pill bg-secondary fw-normal">API</span>
-                                <span class="skills rounded-pill bg-secondary fw-normal">GITHUB</span>
+                                <span class="skills rounded-pill">API</span>
+                                <span class="skills rounded-pill">GITHUB</span>
                             </div>
                             <h5 class="p-2">Languages</h5>
                             <div class="butSkill">
-                                <span class="skills rounded-pill bg-secondary fw-normal">HTML</span>
-                                <span class="skills rounded-pill bg-secondary fw-normal">Javascript</span>
+                                <span class="skills rounded-pill">HTML</span>
+                                <span class="skills rounded-pill">Javascript</span>
                             </div>
                             <h5 class="p-2">Back-end</h5>
                             <div class="butSkill">
-                                <span class="skills rounded-pill bg-secondary fw-normal">Node.js</span>
-                                <span class="skills rounded-pill bg-secondary fw-normal">Twit</span>
-                                <span class="skills rounded-pill bg-secondary fw-normal">Express</span>
-                                <span class="skills rounded-pill bg-secondary fw-normal">Dotenv</span>
+                                <span class="skills rounded-pill">Node.js</span>
+                                <span class="skills rounded-pill">Twit</span>
+                                <span class="skills rounded-pill">Express</span>
+                                <span class="skills rounded-pill">Dotenv</span>
                             </div>
                         </div>
                     </div>
@@ -551,7 +585,16 @@
 
                     <!-- create form -->
                     <form id="contact-form" method="post" action="contact.php" role="form">
-                        <h1 class="display-2 fw-normal">Contact Me</h1>
+                        <h1 class="display-3 fw-normal">Contact Steph</h1>
+
+                        <!-- Required Fields -->
+                        <div class="row">
+                            <div class="col-md-12">
+                                <p class="text-muted">
+                                    <strong>*</strong> These fields are required.
+                                </p>
+                            </div>
+                        </div>
 
                         <div class="messages"></div>
 
@@ -579,11 +622,10 @@
                             <!-- Subject Input -->
                             <div class="mb-3">
                                 <div class="form-group">
-                                    <label for="form_subject">Subject *</label>
+                                    <label for="form_subject">Subject</label>
                                     <input id="form_subject" type="text" name="subject" class="form-control"
-                                        placeholder="Please enter the subject for your message *" required="required"
-                                        data-error="subject is required.">
-                                    <div class="help-block with-errors"></div>
+                                        placeholder="Please enter the subject for your message">
+
                                 </div>
                             </div>
                             <!-- Message Input -->
@@ -596,16 +638,11 @@
                                     <div class="help-block with-errors"></div>
                                 </div>
                             </div>
+
+
                             <!-- Submit Button -->
                             <div class="d-grid">
-                                <input type="submit" class="btn btn-lg bg-secondary text-light" value="Send message">
-                            </div>
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <p class="text-muted">
-                                        <strong>*</strong> These fields are required.
-                                    </p>
-                                </div>
+                                <input type="submit" class="btn btn-lg btn-send" value="Send message">
                             </div>
                         </div>
 
@@ -663,12 +700,16 @@
         <p class="h6 fw-lead 3text-white text-center">Copyright 2021 Stephanie Mason</p>
     </footer>
 
-    <!-- Core theme JS-->
-    <script src="scripts.js"></script>
-
+    <!-- JQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
         integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- Bootstrap Validator -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.min.js"
+        integrity="sha512-dTu0vJs5ndrd3kPwnYixvOCsvef5SGYW/zSSK4bcjRBcZHzqThq7pt7PmCv55yb8iBvni0TSeIDV8RYKjZL36A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 
     <!-- Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
@@ -682,6 +723,19 @@
     <script>
         AOS.init({ disable: 'mobile' });
     </script>
+
+    <!-- Close Menu -->
+    <!-- <script>
+        const navLinks = document.querySelectorAll('.nav-item')
+        const menuToggle = document.getElementById('navbarCollapse')
+        const bsCollapse = new bootstrap.Collapse(menuToggle)
+        navLinks.forEach((l) => {
+            l.addEventListener('click', () => { bsCollapse.toggle() })
+        })
+    </script> -->
+
+    <!-- Core theme JS-->
+    <script src="scripts.js"></script>
 
 </body>
 
