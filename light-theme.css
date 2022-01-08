@@ -10,7 +10,7 @@ body {
 }
 
 html {
-    scroll-padding-top: 70px;
+    scroll-padding-top: 50px;
 }
 
 
@@ -69,7 +69,6 @@ html {
 
 
 /* Theme switcher button */
-
 .btn-toggle {
     transition: all .25s ease-in-out;
     color: #444;
@@ -90,6 +89,18 @@ html {
 
 }
 
+/* About Me */
+
+.aboutMe {
+    height: auto;
+    margin-bottom: 50px;
+}
+
+.profile {
+    width: 400px;
+    border-radius: 50%;
+    border: #e5608f 5px solid;
+}
 
 /* Portfolio */
 #portOne {
@@ -195,6 +206,9 @@ footer {
     background-color: #F783AC;
 }
 
+footer .foot {
+    padding-bottom: 10px;
+}
 
 
 /* Back to Top Button */
@@ -208,10 +222,10 @@ footer {
     cursor: pointer;
     align-items: center;
     justify-content: center;
-    margin: 0 3em 3em 0;
+    margin: 0 1.5em 1.5em 0;
     border-radius: 50%;
-    width: 80px;
-    height: 80px;
+    width: 55px;
+    height: 55px;
     background-color: #F8F8F8;
     z-index: 9999;
     text-decoration: none;
