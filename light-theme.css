@@ -13,6 +13,13 @@ html {
     scroll-padding-top: 50px;
 }
 
+.htmlLinks{
+    color: #444;
+}
+
+.htmlLinks:hover {
+    color: #e5608f;
+}
 
 /* NavBar */
 .navbar {
@@ -115,7 +122,7 @@ html {
 
 #linksPort:hover {
     Cursor: pointer;
-    color: #ffb4cf !important;
+    color: #e5608f !important;
     transform: scale(1.05);
     transition: all ease .7s;
 }

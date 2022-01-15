@@ -13,6 +13,10 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
+    <!-- BootstrapValidator -->
+    <link rel="stylesheet"
+        href="//cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.2/css/bootstrapValidator.min.css" />
+
     <!--Font Awesome (free version)-->
     <script src="https://kit.fontawesome.com/2dd003b306.js" crossorigin="anonymous"></script>
 
@@ -117,66 +121,78 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <!-- Bootstrap 5 starter form -->
-                        <form id="contact-form" method="post" action="contact.php" role="form">
-
-
-                            <!-- Required Fields -->
+                        
+                        <!-- Form -->
+                        <form id="contact_form" method="post" action="contact.php" role="form">
+                            <h1 class="display-3 fw-normal">Contact Steph</h1>
+    
                             <div class="row">
                                 <div class="col-md-12">
-                                    <p class="text-muted text-center">
+                                    <p class="text-muted">
                                         <strong>*</strong> These fields are required.
                                     </p>
                                 </div>
                             </div>
-
-                            <div class="messages">
-
-                                <div class="controls">
-                                    <!-- Name Input -->
-                                    <div class="mb-3">
-                                        <div class="form-group">
-                                            <label for="form_name">Name *</label>
-                                            <input id="form_name" type="text" name="name" class="form-control"
-                                                placeholder="Please enter your Name *" required="required"
-                                                data-error="Name is required.">
-                                            <div class="help-block with-errors"></div>
-                                        </div>
-                                    </div>
-                                    <!-- Email Input -->
-                                    <div class="mb-3">
-                                        <div class="form-group">
-                                            <label for="form_email">Email *</label>
-                                            <input id="form_email" type="email" name="email" class="form-control"
-                                                placeholder="Please enter your email *" required="required"
-                                                data-error="Valid email is required.">
-                                            <div class="help-block with-errors"></div>
-                                        </div>
-                                    </div>
-                                    <!-- Subject Input -->
-                                    <div class="mb-3">
-                                        <div class="form-group">
-                                            <label for="form_subject">Subject</label>
-                                            <input id="form_subject" type="text" name="subject" class="form-control"
-                                                placeholder="Please enter the subject for your message">
-                                        </div>
-                                    </div>
-                                    <!-- Message Input -->
-                                    <div class="mb-3">
-                                        <div class="form-group">
-                                            <label for="form_message">Message *</label>
-                                            <textarea id="form_message" name="message" class="form-control"
-                                                placeholder="Message for me *" rows="4" required="required"
-                                                data-error="Please, leave us a message."></textarea>
-                                            <div class="help-block with-errors"></div>
-                                        </div>
-                                    </div>
-                                    <!-- Submit Button -->
-                                    <div class="d-grid">
-                                        <input type="submit" class="btn btn-lg btn-send" value="Send message">
+    
+                            <!-- Required Fields -->
+                            <div class="messages" id="messages"></div>
+                            <div class="controls">
+    
+                                <!-- Name Input -->
+                                <div class="mb-3">
+                                    <div class="form-group">
+                                        <label for="form_name">Name *</label>
+                                        <input id="form_name" type="text" name="name" class="form-control"
+                                            placeholder="Please enter your Name *" required="required"
+                                            data-error="Name is required.">
+                                        <div class="help-block with-errors"></div>
                                     </div>
                                 </div>
+                                <!-- Email Input -->
+                                <div class="mb-3">
+                                    <div class="form-group">
+                                        <label for="form_email">Email *</label>
+                                        <input id="form_email" type="email" name="email" class="form-control"
+                                            placeholder="Please enter your email *" required="required"
+                                            data-error="Valid email is required.">
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <!-- Subject Input -->
+                                <div class="mb-3">
+                                    <div class="form-group">
+                                        <label for="form_subject">Subject</label>
+                                        <input id="form_subject" type="text" name="subject" class="form-control"
+                                            placeholder="Please enter the subject for your message">
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <!-- Message Input -->
+                                <div class="mb-3">
+                                    <div class="form-group">
+                                        <label for="form_message">Message *</label>
+                                        <textarea id="form_message" name="message" class="form-control"
+                                            placeholder="Message for me *" rows="4" required="required"
+                                            data-error="Please, leave us a message."></textarea>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+    
+                                <!-- ReCAPTCHA -->
+                                <div class="mb-3">
+                                    <div class="form-group">
+                                        <div class="g-recaptcha" data-sitekey="6LdcjtodAAAAAFQiM30YV02Pb4rfN3Z_NKmp3r-0">
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Submit Button -->
+                                <div class="d-grid">
+                                    <input type="submit" class="btn btn-lg btn-send" value="Send message">
+                                </div>
+    
                             </div>
+    
                         </form>
                     </div>
                 </div>
@@ -237,7 +253,11 @@
                     <div class="card-body">
                         <h3 class="card-title py-1">Hi, I'm Steph</h3>
                         <p class="card-text">
-                            A recent graduate of the <a href="" data-toggle="tooltip" data-placement="top" title="Click here to see my Nanodegree">Front End Web Developer Nanodegree from Udacity.</a>
+                            A recent graduate of the <a class="htmlLinks"
+                                href="https://graduation.udacity.com/confirm/AEKX7APL" data-toggle="tooltip"
+                                data-placement="top" title="Click here to see my Nanodegree." target="_blank">Front End
+                                Web Developer Nanodegree from
+                                Udacity.</a>
                         </p>
                         <p class="card-text">
                             An enthusiastic and detail-oriented Junior Front End Developer seeking to hone my skills in
@@ -260,7 +280,14 @@
                             <span class="skills rounded-pill">Time Management</span>
                             <span class="skills rounded-pill">Customer Service</span>
                             <span class="skills rounded-pill">Communiation Skills</span>
-
+                        </div>
+                        <div>
+                            <h5 class="p-2 Mt-2 mt-lg-0">Links</h5>
+                            <a id="linksPort" class="p-1" href="https://github.com/Jeneara" target="_blank"> <i
+                                    class="fab fa-github fa-3x"></i></a>
+                            <a id="linksPort" class="p-1" href="https://www.linkedin.com/in/steph-mason-885666100/"
+                                target="_blank">
+                                <i class="fab fa-linkedin fa-3x"></i></a>
                         </div>
                     </div>
                 </div>
@@ -292,7 +319,9 @@
                         </p>
                         <h5 class="p-1">Project details</h5>
                         </p>
-                        Built on Wordpress using the <a href="https://avada.theme-fusion.com/" target="_blank">Avada</a> Child Theme.
+                        Built on Wordpress using the <a class="htmlLinks" href="https://avada.theme-fusion.com/"
+                            target="_blank">Avada</a>
+                        Child Theme.
                         Database is built using Advance Custom Fields and Taxonomies.
                         Search function being built using Vue.js.
                         </p>
@@ -404,18 +433,20 @@
                         </p>
                         <h5 class="p-1">Project details</h5>
                         </p>
-                        Created as my capstone project for my <a
-                            href="https://www.udacity.com/course/front-end-web-developer-nanodegree--nd0011" target="_blank">Front End
+                        Created as my capstone project for my <a class="htmlLinks"
+                            href="https://www.udacity.com/course/front-end-web-developer-nanodegree--nd0011"
+                            target="_blank">Front End
                             Web Developer Course via Udacity.</a>
                         Built using Webpack, Node and Express. Has Development Mode, Production Mode, Service
                         Workers and Jest Testing.
-                        Uses multiple APIs to create requests from external URLS - <a
+                        Uses multiple APIs to create requests from external URLS - <a class="htmlLinks"
                             href="http://www.geonames.org/export/web-services.html" target="_blank">Geonames</a>, <a
-                            href="https://www.weatherbit.io/" target="_blank">WeatherBit</a>, <a
-                            href="https://pixabay.com/api/docs/" target="_blank">Pixabay</a>.
+                            class="htmlLinks" href="https://www.weatherbit.io/" target="_blank">WeatherBit</a>, <a
+                            class="htmlLinks" href="https://pixabay.com/api/docs/" target="_blank">Pixabay</a>.
                         </p>
                         <!-- GITHUB LINK -->
-                        <a id="linksPort" href=""><i class="fab fa-github fa-3x"></i></a>
+                        <a id="linksPort" href="https://github.com/Jeneara/travel-app-FEND" target="_blank"><i
+                                class="fab fa-github fa-3x"></i></a>
 
                         <div>
                             <h5 class="p-2">Skills</h5>
@@ -460,6 +491,8 @@
                         pulls a photo of the location from Pixabay.
                         </p>
                         <!-- GITHUB LINK -->
+                        <a id="linksPort" href="https://jeneara.github.io/Landing-Page-FEND/" target="_blank"><i
+                                class="fab fa-github fa-3x"></i></a>
                         <div>
                             <h5 class="p-2">Skills</h5>
                             <div class="butSkill">
@@ -568,7 +601,8 @@
                         <ul>
                             <li>Utilising the Twitter Streaming API to retweet and like posts based on specific
                                 hashtags.</li>
-                            <li>Deployed via <a href="https://dashboard.heroku.com/" target="_blank">Heroku.</a></li>
+                            <li>Deployed via <a class="htmlLinks" href="https://dashboard.heroku.com/"
+                                    target="_blank">Heroku.</a></li>
                             <li>Created with Twit a Twitter API Client for node (REST & Streaming API).</li>
                         </ul>
                         </p>
@@ -612,10 +646,9 @@
 
 
                     <!-- create form -->
-                    <form id="contact-form" method="post" action="contact.php" role="form">
+                    <form id="contact_form" method="post" action="contact.php" role="form">
                         <h1 class="display-3 fw-normal">Contact Steph</h1>
 
-                        <!-- Required Fields -->
                         <div class="row">
                             <div class="col-md-12">
                                 <p class="text-muted">
@@ -624,9 +657,10 @@
                             </div>
                         </div>
 
-                        <div class="messages"></div>
-
+                        <!-- Required Fields -->
+                        <div class="messages" id="messages"></div>
                         <div class="controls">
+
                             <!-- Name Input -->
                             <div class="mb-3">
                                 <div class="form-group">
@@ -653,7 +687,7 @@
                                     <label for="form_subject">Subject</label>
                                     <input id="form_subject" type="text" name="subject" class="form-control"
                                         placeholder="Please enter the subject for your message">
-
+                                    <div class="help-block with-errors"></div>
                                 </div>
                             </div>
                             <!-- Message Input -->
@@ -667,11 +701,19 @@
                                 </div>
                             </div>
 
-
+                            <!-- ReCAPTCHA -->
+                            <div class="mb-3">
+                                <div class="form-group">
+                                    <div class="g-recaptcha" data-sitekey="6LdcjtodAAAAAFQiM30YV02Pb4rfN3Z_NKmp3r-0">
+                                    </div>
+                                </div>
+                            </div>
+                            
                             <!-- Submit Button -->
                             <div class="d-grid">
                                 <input type="submit" class="btn btn-lg btn-send" value="Send message">
                             </div>
+
                         </div>
 
                     </form>
@@ -725,7 +767,9 @@
     </svg>
 
     <footer class="pb-3">
-        <p class="foot h6 fw-lead text-white text-center">Copyright 2022 Stephanie Mason</p>
+        <div>
+            <p class="foot h6 fw-lead text-white text-center">Copyright 2022 Stephanie Mason</p>
+        </div>
     </footer>
 
 
@@ -744,6 +788,13 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
+
+
+    <!-- Google reCAPTCHA-->
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+
+    <!-- Ajax Form -->
+    <script src="ajax_contact.js"></script>
 
     <!-- AOS JS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
