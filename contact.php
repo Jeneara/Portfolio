@@ -6,7 +6,7 @@ $subject = 'New message from contact form';
 $form_fields = array('name' => 'Name', 'email' => 'Email', 'subject' => 'Subject', 'message' => 'Message'); 
 $mail_send_suceess = 'Contact form successfully submitted. Thank you, I will get back to you soon!';
 $mail_send_failed = 'There was an error while submitting the form. Please try again later';
-$recaptcha_secret_key = '6LdcjtodAAAAALDvaPoXN_JECmnTFardacJezyyD';
+$recaptcha_secret_key = '';
 try {
     if (!empty($_POST)) {            
         if (!isset($_POST['g-recaptcha-response'])) {
